@@ -1,5 +1,4 @@
 # --- 1. Install and Load Required Packages ---
-# You may need to run these install commands once in your R console
 # install.packages("tidyverse")
 # install.packages("ggplot2")
 # install.packages("caret")
@@ -15,7 +14,6 @@ library(pROC)         # For ROC curve analysis
 library(reshape2)     # For formatting the confusion matrix for ggplot
 
 # --- 2. Load the Data ---
-# Set the file path to your dataset
 file_path <- "iiot_intrusion_dataset_enriched.csv"
 iiot_data <- readr::read_csv(file_path)
 
@@ -25,7 +23,6 @@ str(iiot_data)
 
 
 # --- 3. Preprocessing and Feature Engineering ---
-# Select relevant columns.
 data_clean <- iiot_data %>%
   select(-timestamp, -attack_type)
 
