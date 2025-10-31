@@ -95,13 +95,13 @@ print(cm$table)
 
 print("Overall Statistics:")
 print(cm$overall[c("Accuracy", "Kappa")])
+print(paste("Test Accuracy:", round(as.numeric(cm$overall["Accuracy"]), 4)))
 
 print("Class-Specific Statistics (for 'Attack' class):")
 print(cm$byClass[c("Precision", "Recall", "F1")])
 
 
 # --- 7. Visualization: Confusion Matrix and ROC Curve ---
-# (This is the first block you added)
 
 # Convert confusion matrix to dataframe for plotting
 cm_table <- as.data.frame(cm$table)
@@ -230,7 +230,6 @@ print(final_report)
 
 
 # --- 10. Visualization for Final Predictions ---
-# (This is the second block you added)
 
 prediction_df <- data.frame(
   Device = new_iot_data$device_id,
