@@ -17,7 +17,7 @@ library(randomForest) # For the Random Forest classification model
 
 # --- 2. Load the Data ---
 # Set the file path to your dataset
-setwd("C:\\Users\\navee\\OneDrive\\Desktop\\Temp\\DS_Project")
+setwd("S:\\Studies\\Lab\\Data_Science\\DS-Project-SEM5")
 file_path <- "iiot_intrusion_dataset_enriched.csv"
 iiot_data <- readr::read_csv(file_path)
 
